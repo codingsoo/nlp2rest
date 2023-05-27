@@ -19,15 +19,33 @@ To set up the environment for this project, you will need to run a setup script 
    
 This script installs necessary packages and sets up the environment for the project.
 
-2. Download NLTK stopwords:
+2. Download requirements and NLTK stopwords:
 
 ```terminal
+pip3 install -r requirements.txt
 python -m nltk.downloader stopwords
 ```
 
 This command downloads the "stopwords" package from NLTK, which is used for removing common words (like "the", "is", "in") from text during text processing.
 
 ## Run NLP2REST's Rule Generator
+
+### Training the Model
+
+Run the following commands in your terminal:
+
+```
+python3 train.py
+```
+
+Note: Training the model will take approximately 20 hours.
+
+You can also use the pre-trained models.
+
+- [model](https://drive.google.com/file/d/1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF/view?usp=share_link)
+- [model_ngram](https://drive.google.com/file/d/1j1XA1dufDgqSkIGlQn97-WeKElaL8708/view?usp=share_link)
+
+Make sure to download both models and place them in the root directory of the project.
 
 ### HTTP interface
 
