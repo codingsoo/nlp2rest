@@ -58,3 +58,71 @@ tmux attach -t session-name
 ```
 
 Replace `session-name` with the name of the Tmux session for the service (e.g., `fdic-proxy`). To detach from a Tmux session, press `Ctrl + b` followed by `d`.
+
+
+## Run NLP2REST's Rule Generator
+
+### HTTP interface
+
+To run the API, execute the `app.py` script using the following command:
+
+```
+python app.py
+```
+
+By default, the application will start on `0.0.0.0` (accessible from any IP address) and port `4000`. You can access the application via `http://localhost:4000`.
+
+#### Example Usage
+
+Here is an example of how to use the /generate_rules endpoint with curl:
+
+```
+curl -X POST -H "Content-Type: application/json" -d '{"param_names": ["param1", "param2"], "param_name": "param3", "description": "Some description"}' http://localhost:4000/generate_rules
+```
+
+This command sends a POST request to the `/generate_rules` endpoint with the provided JSON data, and the server will respond with the generated rules.
+
+#### Endpoints
+
+There are two endpoints available:
+
+1. `/status`: This is a GET endpoint that checks if the service is running. It returns a 200 OK status code if the RuleGenerator instance is ready, and a 500 status code if the RuleGenerator failed to initialize.
+
+2. `/generate_rules`: This is a POST endpoint that accepts JSON data in the request body and generates rules based on the provided parameters. The JSON data should contain:
+   - `param_names`: This is a list of parameter names. It is optional and defaults to an empty list.
+   - `param_name`: This is a single parameter name. It is optional and defaults to an empty string.
+   - `description`: This is a string that provides a description. It is optional and defaults to an empty string.
+
+This command sends a POST request to the /generate_rules endpoint with the provided JSON data, and the server will respond with the generated rules.
+
+### Command Line Interface (CLI)
+
+To run the CLI, execute the `nlp2rest.py` script (or whatever your file with the CLI code is named) with the required arguments:
+
+```
+python main.py --option [values]
+```
+
+The script accepts the following options:
+
+`--specs_dir`: The path to the directory containing the specification files. This is required if `--train` is given.
+`--output_model_file`: The path to the file where the trained model will be saved. This is required if `--train` is given.
+`--train`: If given, the model will be trained.
+`--generate_rules`: If given, rules will be generated.
+`--spec_path`: The path to the OpenAPI specification. This is required if `--generate_rules` is given.
+`--settings`: The path to the settings file. This is required if `--generate_rules` is given.
+`--model_name`: The name of the model. This is required if `--generate_rules` is given.
+
+For example, to train a model, you might run:
+
+```
+python main.py --train --specs_dir ./specs --output_model_file ./model
+```
+
+And to generate rules, you might run:
+
+```
+python main.py --generate_rules --spec_path ./openapi_spec.yaml --settings ./settings2.yaml --model_name rest_model
+```
+
+The generated rules are saved to a file named `found_rules.json` in the project root directory.
