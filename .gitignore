@@ -1,0 +1,14 @@
+.idea/
+.hypothesis/
+.DS_Store/
+__pycache__/
+
+venv/
+
+nl.json
+rest_model
+rest_model.wv.vectors_ngrams.npy
+log-*.txt
+output.json
+found_rules.json
+legacy.py

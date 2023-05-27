@@ -1,0 +1,105 @@
+enum:
+  type:
+    string:
+      - "string"
+    number:
+      - "number"
+    integer:
+      - "integer"
+    boolean:
+      - "boolean"
+    array:
+      - "list"
+      - "array"
+    object:
+      - "object"
+  format:
+    date-time:
+      - "time"
+    date:
+      - "date"
+    password:
+      - "password"
+    byte:
+      - "base64"
+    binary:
+      - "binary"
+    email:
+      - "email"
+    uuid:
+      - "uuid"
+    uri:
+      - "uri"
+    url:
+      - "url"
+    hostname:
+      - "hostname"
+    ipv4:
+      - "ipv4"
+    ipv6:
+      - "ipv6"
+  collectionFormat:
+    csv:
+      - "comma"
+    ssv:
+      - "space"
+    psv:
+      - "pipe"
+    tsv:
+      - "tab"
+boolean:
+  required:
+    - "require"
+  optional:
+    - "option"
+  inclusive:
+    - "inclusive"
+value:
+  default:
+    - "default"
+  example:
+    - "example"
+    - "value"
+    - "like"
+    - "e.g."
+    - "i.e."
+    - "such"
+    - "set"
+  minMax:
+    - "between"
+    - "letter"
+    - "character"
+  minimum:
+    - "minimum"
+    - "great"
+    - "exceed"
+    - "from"
+  maximum:
+    - "maximum"
+    - "less"
+    - "up"
+    - "to"
+parameter:
+  requires:
+    - "set"
+    - "specify"
+    - "valid"
+    - "require"
+    - "only"
+  or:
+    - "or"
+  onlyOne:
+    - "only"
+    - "one"
+  allOrNone:
+    - "conjunction"
+  zeroOrOne:
+    - "exclusive"
+  arithmeticRelational:
+    - "<="
+    - ">="
+    - "<"
+    - ">"
+    - "="
+    - "+"
+    - "-"
