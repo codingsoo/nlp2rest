@@ -37,6 +37,13 @@ To run the API, execute the `app.py` script using the following command:
 python app.py
 ```
 
+You can also use Dockerfile:
+
+```
+docker build -t nlp2rest .
+docker run -p 4000:4000 --name nlp2rest-demo nlp2rest
+```
+
 By default, the application will start on `0.0.0.0` (accessible from any IP address) and port `4000`. You can access the application via `http://localhost:4000`.
 
 #### Example Usage
@@ -100,6 +107,11 @@ The generated rules are saved to a file named `found_rules.json` in the project 
 We provide a Python script that starts services using Tmux sessions and runs a Mitmproxy instance for each service to intercept and manipulate the traffic.
 
 The script requires two command-line arguments: the name of the service to start and a token. The name can be one of the following: `fdic`, `genome-nexus`, `language-tool`, `ocvn`, `ohsome`, `omdb`, `rest-countries`, `spotify`, `youtube`, `all (starts all the services)`.
+
+### Obtain authentication
+
+1. Obtain a Spotify API key by visiting https://developer.spotify.com/console/get-playlists/ and clicking "Get Token".
+2. Obtain a OMDB API key by visiting https://www.omdbapi.com/apikey.aspx
 
 ### Example Usage
 
