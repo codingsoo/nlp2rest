@@ -29,9 +29,8 @@ def generate_rules():
 
     data = request.get_json()
 
-    param_names = data.get('requestParameters', "")
-    param_names = param_names.replace(" ", "").split(',')
-    param_name = data.get('target', '')
+    param_names = data.get('param_names', [])
+    param_name = data.get('param_name', '')
     description = data.get('description', '')
 
     # Generate rules

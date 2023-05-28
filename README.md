@@ -81,9 +81,9 @@ There are two endpoints available:
 1. `/status`: This is a GET endpoint that checks if the service is running. It returns a 200 OK status code if the RuleGenerator instance is ready, and a 500 status code if the RuleGenerator failed to initialize.
 
 2. `/generate_rules`: This is a POST endpoint that accepts JSON data in the request body and generates rules based on the provided parameters. The JSON data should contain:
-   - `requestParameters`: This is a comma-separated value of parameter names. It is optional and defaults to an empty list.
-   - `target`: This is a single parameter name. It is optional and defaults to an empty string.
-   - `description`: This is a string that provides a description. It is optional and defaults to an empty string.
+   - param_names: This is a list of parameter names in the operation. It is optional and defaults to an empty list.
+   - param_name: This is a single parameter name that you want to generate rules. It is optional and defaults to an empty string.
+   - description: This is a string that provides a description that you want to generate rules. It is optional and defaults to an empty string.
 
 This command sends a POST request to the /generate_rules endpoint with the provided JSON data, and the server will respond with the generated rules.
 
