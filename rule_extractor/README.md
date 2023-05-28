@@ -7,7 +7,6 @@ Welcome to the NLP2REST's Rule Extractor, a tool designed to extract REST API ru
 To install the project dependencies, navigate to the root directory and run the following commands in your terminal:
 
 ```
-cd nlp2rest
 pip install -r requirements.txt
 ```
 
