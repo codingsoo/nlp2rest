@@ -4,7 +4,7 @@ import com.google.common.collect.Sets;
 import io.resttestgen.core.Configuration;
 import io.resttestgen.core.Environment;
 import io.resttestgen.core.datatype.rule.Rule;
-import io.resttestgen.core.helper.NlpRestTestProxy;
+import io.resttestgen.core.helper.RuleExtractorProxy;
 import io.resttestgen.core.openapi.Operation;
 import io.resttestgen.core.testing.Strategy;
 import io.resttestgen.core.testing.TestRunner;
@@ -46,14 +46,20 @@ public class NlpStrategy extends Strategy {
     @Override
     public void start() {
 
-        // Process descriptions in the specification
-        for (Operation operation : Environment.getInstance().getOpenAPI().getOperations()) {
-            operation.getRulesToValidate().addAll(NlpRestTestProxy.extractRulesFromOperationText(operation));
-            operation.getRulesToValidate().addAll(NlpRestTestProxy.extractRulesFromRequestBodyDescription(operation));
-            operation.getAllRequestParameters().forEach(p -> operation.getRulesToValidate().addAll(NlpRestTestProxy.extractRulesFromParameterText(p)));
+        // Check if the rule generator is online
+        if (!RuleExtractorProxy.isOnline()) {
+            logger.warn("Rule generator is not reachable. Make sure you ran it and it is reachable at the URL specified in the RuleGenerator class.");
+            return;
         }
 
-        NlpRestTestProxy.printStatistics();
+        // Process descriptions in the specification
+        for (Operation operation : Environment.getInstance().getOpenAPI().getOperations()) {
+            operation.getRulesToValidate().addAll(RuleExtractorProxy.extractRulesFromOperationText(operation));
+            operation.getRulesToValidate().addAll(RuleExtractorProxy.extractRulesFromRequestBodyDescription(operation));
+            operation.getAllRequestParameters().forEach(p -> operation.getRulesToValidate().addAll(RuleExtractorProxy.extractRulesFromParameterText(p)));
+        }
+
+        RuleExtractorProxy.printStatistics();
 
         logger.info("NLP finished. Starting validation.");
 
@@ -62,7 +68,7 @@ public class NlpStrategy extends Strategy {
 
         while (!sorter.isEmpty()) {
 
-            System.out.println("Operations remaining: " + sorter.getQueueSize());
+            logger.info("Operations remaining: " + sorter.getQueueSize());
 
             Operation operation = sorter.getFirst();
 
@@ -109,16 +115,16 @@ public class NlpStrategy extends Strategy {
                         coarseValidatedRules.put(operation, combination);
                         runFineDynamicValidation(operation, successfulSequence, combination);
 
-                        System.out.println(operation);
-                        System.out.println("From NLP:" + rulesFromNlp.get(operation));
-                        System.out.println("Coarse validated: " + coarseValidatedRules.get(operation));
-                        System.out.println("Fine validated: " + fineValidatedRules.get(operation));
+                        logger.info(operation);
+                        logger.info("From NLP:" + rulesFromNlp.get(operation));
+                        logger.info("Coarse validated: " + coarseValidatedRules.get(operation));
+                        logger.info("Fine validated: " + fineValidatedRules.get(operation));
 
                         Set<Rule> discardedByCoarseValidation = Sets.difference(new HashSet<>(rulesFromNlp.get(operation)), new HashSet<>(coarseValidatedRules.get(operation)));
                         Set<Rule> discardedByFineValidation = Sets.difference(new HashSet<>(coarseValidatedRules.get(operation)), new HashSet<>(fineValidatedRules.get(operation)));
 
-                        System.out.println("Discarded by coarse validation: " + discardedByCoarseValidation);
-                        System.out.println("Discarded by fine validation: " + discardedByFineValidation);
+                        logger.info("Discarded by coarse validation: " + discardedByCoarseValidation);
+                        logger.info("Discarded by fine validation: " + discardedByFineValidation);
 
 
 
@@ -194,7 +200,7 @@ public class NlpStrategy extends Strategy {
         // Apply rules to specification and export it
         for (Operation operation : Environment.getInstance().getOpenAPI().getOperations()) {
             List<Rule> rulesToApply = fineValidatedRules.get(operation);
-            System.out.println("Applying rules to operation " + operation + ": " + rulesToApply);
+            logger.info("Applying rules to operation " + operation + ": " + rulesToApply);
             operation.applyRules(rulesToApply);
         }
         try {
