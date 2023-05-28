@@ -1,4 +1,4 @@
-package io.resttestgen.implementation.strategy;
+package io.resttestgen.implementation.strategy.support;
 
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
@@ -7,7 +7,7 @@ import io.resttestgen.core.Environment;
 import io.resttestgen.core.datatype.ParameterName;
 import io.resttestgen.core.datatype.parameter.Parameter;
 import io.resttestgen.core.datatype.rule.*;
-import io.resttestgen.core.helper.NlpRestTestProxy;
+import io.resttestgen.core.helper.RuleExtractorProxy;
 import io.resttestgen.core.openapi.Operation;
 import io.resttestgen.core.testing.Strategy;
 import io.resttestgen.core.testing.TestInteraction;
@@ -44,9 +44,9 @@ public class SecondNlpStrategy extends Strategy {
     public void start() {
 
         for (Operation operation : Environment.getInstance().getOpenAPI().getOperations()) {
-            operation.getRulesToValidate().addAll(NlpRestTestProxy.extractRulesFromOperationText(operation));
-            operation.getRulesToValidate().addAll(NlpRestTestProxy.extractRulesFromRequestBodyDescription(operation));
-            operation.getAllRequestParameters().forEach(p -> operation.getRulesToValidate().addAll(NlpRestTestProxy.extractRulesFromParameterText(p)));
+            operation.getRulesToValidate().addAll(RuleExtractorProxy.extractRulesFromOperationText(operation));
+            operation.getRulesToValidate().addAll(RuleExtractorProxy.extractRulesFromRequestBodyDescription(operation));
+            operation.getAllRequestParameters().forEach(p -> operation.getRulesToValidate().addAll(RuleExtractorProxy.extractRulesFromParameterText(p)));
         }
 
         int totalOperationsCount = Environment.getInstance().getOpenAPI().getOperations().size();
@@ -54,7 +54,7 @@ public class SecondNlpStrategy extends Strategy {
 
         System.out.println("NLP finished. Starting validation.");
 
-        NlpRestTestProxy.printStatistics();
+        RuleExtractorProxy.printStatistics();
 
         // NLP response processor will identify text in error responses and send it to NLPRestTest
         testRunner.addResponseProcessor(nlpResponseProcessor);
@@ -183,7 +183,7 @@ public class SecondNlpStrategy extends Strategy {
 
                                                                         successfulSequence = runDynamicValidation(operationWithRulesApplied);
 
-                                                                        NlpRestTestProxy.printStatistics();
+                                                                        RuleExtractorProxy.printStatistics();
 
                                                                         // If no successful sequence was generated
                                                                         if (successfulSequence == null) {

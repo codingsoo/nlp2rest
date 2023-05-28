@@ -1,4 +1,4 @@
-package io.resttestgen.implementation.strategy;
+package io.resttestgen.implementation.strategy.support;
 
 import io.resttestgen.core.Environment;
 import io.resttestgen.core.testing.Strategy;

@@ -1,4 +1,4 @@
-package io.resttestgen.implementation.strategy;
+package io.resttestgen.implementation.strategy.support;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;

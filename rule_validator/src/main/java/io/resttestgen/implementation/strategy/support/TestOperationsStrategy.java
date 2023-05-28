@@ -1,4 +1,4 @@
-package io.resttestgen.implementation.strategy;
+package io.resttestgen.implementation.strategy.support;
 
 import io.resttestgen.core.openapi.Operation;
 import io.resttestgen.core.testing.Strategy;
@@ -7,6 +7,7 @@ import io.resttestgen.core.testing.TestSequence;
 import io.resttestgen.core.testing.operationsorter.OperationsSorter;
 import io.resttestgen.implementation.fuzzer.NominalFuzzer;
 import io.resttestgen.implementation.operationssorter.RandomOperationsSorter;
+import io.resttestgen.implementation.strategy.NominalAndErrorStrategy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

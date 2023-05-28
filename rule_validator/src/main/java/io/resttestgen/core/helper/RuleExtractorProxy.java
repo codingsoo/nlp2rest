@@ -1,7 +1,6 @@
 package io.resttestgen.core.helper;
 
 import com.google.gson.*;
-import io.resttestgen.core.Environment;
 import io.resttestgen.core.datatype.ParameterName;
 import io.resttestgen.core.datatype.parameter.Parameter;
 import io.resttestgen.core.datatype.parameter.structured.ArrayParameter;
@@ -18,17 +17,35 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class NlpRestTestProxy {
+public class RuleExtractorProxy {
 
-    private static final Logger logger = LogManager.getLogger(NlpRestTestProxy.class);
+    private static final Logger logger = LogManager.getLogger(RuleExtractorProxy.class);
     private static final OkHttpClient httpClient = new OkHttpClient();
-    private static final String baseUrl = "http://192.168.0.12:4000";
+    private static final String baseUrl = "http://localhost:4000";
     private static final Gson gson = new Gson();
     private static final RuleFactory ruleFactory = new RuleFactory();
 
     private static final Map<String, String> localCache = new HashMap<>();
     private static int serverCount = 0;
     private static int cacheCount = 0;
+
+    /**
+     * Checks if the rule extractor is online.
+     * @return true if the Rule Extractor is online and operational, false otherwise.
+     */
+    public static boolean isOnline() {
+        Request request = new Request.Builder().url(baseUrl + "/status").build();
+        Call call = httpClient.newCall(request);
+        try {
+            Response response = call.execute();
+            if (response.isSuccessful()) {
+                return true;
+            }
+        } catch (IOException ignored) {
+        }
+
+        return false;
+    }
 
     @NotNull
     public static HashSet<Rule> extractRulesFromParameterText(Parameter parameter) {
@@ -38,20 +55,21 @@ public class NlpRestTestProxy {
         // Continues only if description has at least 3 chars
         if (parameter.getDescription().trim().length() > 3) {
 
-            Map<String, String> jsonMap = new TreeMap<>();
-            jsonMap.put("requestParameters", getParameterNamesList(parameter.getOperation()));
-            jsonMap.put("target", parameter.getName().toString());
-            jsonMap.put("responseParameters", getResponseParameterNamesList(parameter.getOperation()));
+            Map<String, Object> jsonMap = new TreeMap<>();
+            jsonMap.put("param_names", getParameterNamesList(parameter.getOperation()));
+            jsonMap.put("param_name", parameter.getName().toString());
             jsonMap.put("description", parameter.getDescription());
 
             String jsonBody = gson.toJson(jsonMap);
+
+            System.out.println(jsonBody);
 
             String responseBody = localCache.get(jsonBody);
 
             if (responseBody == null) {
                 serverCount++;
                 RequestBody body = RequestBody.create(jsonBody, MediaType.parse("application/json"));
-                Request request = new Request.Builder().url(baseUrl + "/parameter").post(body).build();
+                Request request = new Request.Builder().url(baseUrl + "/extract_rules").post(body).build();
                 Call call = httpClient.newCall(request);
                 try {
                     Response response = call.execute();
@@ -85,9 +103,9 @@ public class NlpRestTestProxy {
         // Continues only if operation has request parameters and description has at least 3 chars
         if (operation.getAllRequestParameters().size() > 0 && operation.getDescription().trim().length() > 3) {
 
-            Map<String, String> jsonMap = new TreeMap<>();
-            jsonMap.put("requestParameters", getParameterNamesList(operation));
-            jsonMap.put("responseParameters", getResponseParameterNamesList(operation));
+            Map<String, Object> jsonMap = new TreeMap<>();
+            jsonMap.put("param_names", getParameterNamesList(operation));
+            jsonMap.put("param_name", getResponseParameterNamesList(operation));
             jsonMap.put("description", operation.getDescription());
 
             String jsonBody = gson.toJson(jsonMap);
@@ -97,7 +115,7 @@ public class NlpRestTestProxy {
             if (responseBody == null) {
                 serverCount++;
                 RequestBody body = RequestBody.create(jsonBody, MediaType.parse("application/json"));
-                Request request = new Request.Builder().url(baseUrl + "/operation").post(body).build();
+                Request request = new Request.Builder().url(baseUrl + "/extract_rules").post(body).build();
                 Call call = httpClient.newCall(request);
                 try {
                     Response response = call.execute();
@@ -134,20 +152,19 @@ public class NlpRestTestProxy {
         // Continues only if request body is defined and description has at least 3 chars
         if (operation.getRequestBody() != null && operation.getRequestBodyDescription().trim().length() > 3) {
 
-            Map<String, String> jsonMap = new TreeMap<>();
-            jsonMap.put("requestParameters", getParameterNamesList(operation));
-            jsonMap.put("target", operation.getRequestBody().getName().toString());
-            jsonMap.put("responseParameters", getResponseParameterNamesList(operation));
+            Map<String, Object> jsonMap = new TreeMap<>();
+            jsonMap.put("param_names", getParameterNamesList(operation));
+            jsonMap.put("param_name", operation.getRequestBody().getName().toString());
             jsonMap.put("description", operation.getRequestBodyDescription());
 
             String jsonBody = gson.toJson(jsonMap);
-
+            System.out.println(jsonBody);
             String responseBody = localCache.get(jsonBody);
 
             if (responseBody == null) {
                 serverCount++;
                 RequestBody body = RequestBody.create(jsonBody, MediaType.parse("application/json"));
-                Request request = new Request.Builder().url(baseUrl + "/parameter").post(body).build();
+                Request request = new Request.Builder().url(baseUrl + "/extract_rules").post(body).build();
                 Call call = httpClient.newCall(request);
                 try {
                     Response response = call.execute();
@@ -181,10 +198,9 @@ public class NlpRestTestProxy {
         // Continues only if operation has request parameters and description has at least 3 chars
         if (operation.getAllRequestParameters().size() > 0 && serverMessage.trim().length() > 3) {
 
-            Map<String, String> jsonMap = new TreeMap<>();
-            jsonMap.put("requestParameters", getParameterNamesList(operation));
-            jsonMap.put("executedParameters", getUsedRequestParameterNamesList(operation));
-            jsonMap.put("responseParameters", getResponseParameterNamesList(operation));
+            Map<String, Object> jsonMap = new TreeMap<>();
+            jsonMap.put("param_names", getParameterNamesList(operation));
+            jsonMap.put("param_name", getUsedRequestParameterNamesList(operation));
             jsonMap.put("description", serverMessage);
 
             String jsonBody = gson.toJson(jsonMap);
@@ -194,7 +210,7 @@ public class NlpRestTestProxy {
             if (responseBody == null) {
                 serverCount++;
                 RequestBody body = RequestBody.create(jsonBody, MediaType.parse("application/json"));
-                Request request = new Request.Builder().url(baseUrl + "/message").post(body).build();
+                Request request = new Request.Builder().url(baseUrl + "/extract_rules").post(body).build();
                 Call call = httpClient.newCall(request);
                 try {
                     Response response = call.execute();
@@ -222,15 +238,14 @@ public class NlpRestTestProxy {
         return rules;
     }
 
-    private static String getParameterNamesList(Operation operation) {
+    private static List<String> getParameterNamesList(Operation operation) {
 
-        // TODO: understand why parameter are removed from operation. Temporary fix is to retrieve original operation
-        final Operation finalOperation = operation;
+        /*final Operation finalOperation = operation;
         Optional<Operation> originalOperation = Environment.getInstance().getOpenAPI().getOperations().stream()
                 .filter(o -> o.equals(finalOperation)).findFirst();
         if (originalOperation.isPresent()) {
             operation = originalOperation.get();
-        }
+        }*/
 
         List<String> parameterNames = operation.getAllRequestParameters().stream()
                 .filter(e -> !(e.getParent() instanceof ArrayParameter))
@@ -238,9 +253,7 @@ public class NlpRestTestProxy {
                 .distinct().sorted()
                 .collect(Collectors.toList());
         parameterNames.remove("");
-        StringJoiner stringJoiner = new StringJoiner(",");
-        parameterNames.forEach(stringJoiner::add);
-        return stringJoiner.toString();
+        return parameterNames;
     }
 
     private static String getResponseParameterNamesList(Operation operation) {
@@ -287,6 +300,6 @@ public class NlpRestTestProxy {
     }
 
     public static void printStatistics() {
-        System.out.println("STATISTICS: " + serverCount + "/" + cacheCount + " (server/cache)");
+        logger.info("STATISTICS: " + serverCount + "/" + cacheCount + " (server/cache)");
     }
 }

@@ -3,7 +3,7 @@ package io.resttestgen.implementation.responseprocessor;
 import io.resttestgen.core.datatype.parameter.Parameter;
 import io.resttestgen.core.datatype.parameter.leaves.StringParameter;
 import io.resttestgen.core.datatype.rule.Rule;
-import io.resttestgen.core.helper.NlpRestTestProxy;
+import io.resttestgen.core.helper.RuleExtractorProxy;
 import io.resttestgen.core.testing.ResponseProcessor;
 import io.resttestgen.core.testing.TestInteraction;
 import org.jetbrains.annotations.NotNull;
@@ -30,13 +30,13 @@ public class NlpResponseProcessor extends ResponseProcessor {
                     && parameter.getName().toString().toLowerCase().contains("message")
 
                     ) {
-                        rulesFromServerMessage.addAll(NlpRestTestProxy.extractRulesFromServerMessage(testInteraction.getFuzzedOperation(), parameter.getValue().toString()));
+                        rulesFromServerMessage.addAll(RuleExtractorProxy.extractRulesFromServerMessage(testInteraction.getFuzzedOperation(), parameter.getValue().toString()));
                     }
                 }
             }
 
             if (!testInteraction.getResponseHeaders().toLowerCase().contains("content-type")) {
-                rulesFromServerMessage.addAll(NlpRestTestProxy.extractRulesFromServerMessage(testInteraction.getFuzzedOperation(), testInteraction.getResponseBody()));
+                rulesFromServerMessage.addAll(RuleExtractorProxy.extractRulesFromServerMessage(testInteraction.getFuzzedOperation(), testInteraction.getResponseBody()));
             }
 
             System.out.println("SERVER MESSAGE RULES: " + rulesFromServerMessage);

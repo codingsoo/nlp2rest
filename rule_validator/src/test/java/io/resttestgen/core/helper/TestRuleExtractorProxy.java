@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-public class TestNlpRestTestProxy {
+public class TestRuleExtractorProxy {
 
     private static final Environment environment = Environment.getInstance();
 
