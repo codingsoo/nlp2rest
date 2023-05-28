@@ -2,7 +2,26 @@
 
 Welcome to the NLP2REST's Rule Extractor, a tool designed to extract REST API rules from natural language descriptions. This document provides a step-by-step guide on how to set up and use the tool.
 
+## Quick deployment with Docker
+
+If you are only interested in the Rule Extractor web service, you can quickly deploy it with Docker.
+
+First, download the following pretrained models in the current directory:
+- [model](https://drive.google.com/file/d/1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF/view?usp=share_link)
+- [model_ngram](https://drive.google.com/file/d/1j1XA1dufDgqSkIGlQn97-WeKElaL8708/view?usp=share_link)
+
+Then, build and run the docker image with:
+```
+docker build -t rex .
+docker run -p 4000:4000 rex
+```
+
+After few seconds/minutes, the Rule Extractor web service will start and will listen on port `4000`.
+
+
 ## Install requirements
+
+> The requirements and instructions in the following sections are not required if you are using the Docker container.
 
 To install the project dependencies, navigate to the root directory and run the following commands in your terminal:
 
@@ -14,7 +33,7 @@ python -m nltk.downloader wordnet
 
 This project has been successfully tested with Python 3.9. It is recommended to use this version for optimal compatibility.
 
-## Model Training
+## Model training
 
 To train the model, run the following command in your terminal:
 
@@ -31,19 +50,12 @@ As an alternative, you can utilize the pre-trained models provided:
 
 Download these models and place them in this directory for use.
 
-## Web interface
+## Web service
 
 To run the API, execute the `app.py` script using the following command:
 
 ```
 python app.py
-```
-
-You can also use Dockerfile:
-
-```
-docker build -t nlp2rest .
-docker run -p 4000:4000 --name nlp2rest-demo nlp2rest
 ```
 
 By default, the application will start on `0.0.0.0` (accessible from any IP address) and port `4000`. You can access the application via `http://localhost:4000`.
