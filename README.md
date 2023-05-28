@@ -28,6 +28,8 @@ We provide a setup script to install the necessary packages and set up the envir
 ./setup.sh
 ```
 
+It will take around 10 minutes.
+
 ## Steps to Use NLP2REST
 
 1. **REST API(s):** NLP2REST is designed to be applied to one or more target REST APIs. The APIs should be accessible at the URLs detailed in their OpenAPI specifications. We have provided several REST APIs in the [services](https://github.com/codingsoo/nlp2rest/tree/main/services) directory along with a manuscript for running these services. Alternatively, you can use any public APIs accessible online that have OpenAPI specifications. For a quick trial of our approach, we suggest using the [FDIC REST API](https://banks.data.fdic.gov/). This is an online API and its specification is available in our `specifications` directory.

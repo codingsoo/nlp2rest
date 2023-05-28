@@ -16,7 +16,7 @@ docker build -t rex .
 docker run -p 4000:4000 rex
 ```
 
-After few seconds/minutes, the Rule Extractor web service will start and will listen on port `4000`.
+After few minutes, the Rule Extractor web service will start and will listen on port `4000`.
 
 
 ## Install requirements
