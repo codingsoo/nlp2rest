@@ -53,13 +53,13 @@ if __name__ == "__main__":
             "tmux new -d -s genome-nexus-proxy 'LOG_FILE=log-genome-nexus.txt mitmproxy --mode reverse:http://0.0.0.0:50110 -p 9002 -s proxy.py'",
             shell=True)
     elif name == "language-tool":
-        run_service("./services/emb/em/embedded/rest/languagetool", "em.embedded.org.languagetool.RunServer",
+        run_service("emb/em/embedded/rest/languagetool", "em.embedded.org.languagetool.RunServer",
                     "9003")
         subprocess.run(
             "tmux new -d -s language-tool-proxy 'LOG_FILE=log-language-tool.txt mitmproxy --mode reverse:http://0.0.0.0:50111 -p 9003 -s proxy.py'",
             shell=True)
     elif name == "ocvn":
-        run_service("./services/emb/em/embedded/rest/ocvn", "em.embedded.org.devgateway.ocvn.RunServer", "9004")
+        run_service("emb/em/embedded/rest/ocvn", "em.embedded.org.devgateway.ocvn.RunServer", "9004")
         subprocess.run("tmux new -d -s ocvn-proxy 'LOG_FILE=log-ocvn.txt mitmproxy --mode reverse:http://0.0.0.0:50112 -p 9004 -s proxy.py'",
                        shell=True)
     elif name == "ohsome":
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         subprocess.run("tmux new -d -s spotify-proxy 'LOG_FILE=log-spotify.txt mitmproxy --mode reverse:https://api.spotify.com -p 9008 -s proxy.py'", shell=True)
         subprocess.run("python ./spotify_setting.py " + token, shell=True)
     elif name == "youtube":
-        run_service("./services/youtube", "youtube.api.Application", "9009")
+        run_service("youtube", "youtube.api.Application", "9009")
         subprocess.run(
             "tmux new -d -s youtube-proxy 'LOG_FILE=log-youtube.txt mitmproxy --mode reverse:http://0.0.0.0:8080 -p 9009 -s proxy.py'",
             shell=True)
@@ -100,13 +100,13 @@ if __name__ == "__main__":
         subprocess.run(
             "tmux new -d -s genome-nexus-proxy 'LOG_FILE=log-genome-nexus.txt mitmproxy --mode reverse:http://0.0.0.0:50110 -p 9002 -s proxy.py'",
             shell=True)
-        run_service("./services/emb/em/embedded/rest/languagetool",
+        run_service("emb/em/embedded/rest/languagetool",
                     "em.embedded.org.languagetool.RunServer",
                     "9003")
         subprocess.run(
             "tmux new -d -s language-tool-proxy 'LOG_FILE=log-language-tool.txt mitmproxy --mode reverse:http://0.0.0.0:50111 -p 9003 -s proxy.py'",
             shell=True)
-        run_service("./services/emb/em/embedded/rest/ocvn",
+        run_service("emb/em/embedded/rest/ocvn",
                     "em.embedded.org.devgateway.ocvn.RunServer", "9004")
         subprocess.run(
             "tmux new -d -s ocvn-proxy 'LOG_FILE=log-ocvn.txt mitmproxy --mode reverse:http://0.0.0.0:50112 -p 9004 -s proxy.py'",
@@ -131,7 +131,7 @@ if __name__ == "__main__":
             "tmux new -d -s spotify-proxy 'LOG_FILE=log-spotify.txt mitmproxy --mode reverse:https://api.spotify.com -p 9008 -s proxy.py'",
             shell=True)
         subprocess.run("python ./spotify_setting.py " + token, shell=True)
-        run_service("./services/youtube", "youtube.api.Application", "9009")
+        run_service("youtube", "youtube.api.Application", "9009")
         subprocess.run(
             "tmux new -d -s youtube-proxy 'LOG_FILE=log-youtube.txt mitmproxy --mode reverse:http://0.0.0.0:8080 -p 9009 -s proxy.py'",
             shell=True)
