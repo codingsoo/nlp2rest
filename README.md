@@ -1,10 +1,57 @@
 # Enhancing REST API Testing with NLP Techniques
 
+## Getting Started
+
+This section provides a comprehensive guide to setting up an artifact and validating its functionality using a simple example. The setup process was successfully tested on a Google Cloud EC2 machine using an Ubuntu 20.04 image.
+
+1. Setup environment:
+
+Start by setting up your environment. This can be done by executing the setup script in your terminal as shown below:
+
+```
+sh setup.sh
+```
+
+2. Run Service Proxy:
+
+Navigate to the services directory and run the Service Proxy using Python3:
+
+```
+cd services
+python3 run_service.py rest-countries no_token
+```
+
+3. Run Rule Extractor:
+
+Before running the Rule Extractor, download the following pretrained models and place them in the `rule_extractor` directory:
+- [model](https://drive.google.com/file/d/1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF/view?usp=share_link)
+- [model_ngram](https://drive.google.com/file/d/1j1XA1dufDgqSkIGlQn97-WeKElaL8708/view?usp=share_link)
+
+Then, navigate to the `rule_extractor` directory and build a Docker image tagged 'rex'. Please allow around 5 minutes to build the Docker image. Finally, run the Docker image, mapping the host port 4000 to the Docker container's port 4000.
+
+```
+cd rule_extractor
+docker build -t rex .
+docker run -p 4000:4000 rex
+```
+
+4. Run Rule Validator:
+
+Firstly, adjust the `specificationFileName` in the `rtg_config.json` file to point to the rest-countries specification. Then, use Gradle to run the project as follows:
+
+```
+./gradlew run
+```
+
+This will generate an enhanced specification in the `output` directory.
+
+## Detailed Instructions
+
 This repository contains the components necessary to run NLP2REST, an approach designed to automatically enhance OpenAPI specifications with rules extracted from natural language description fields. These rules include constraints and example values. 
 
 In addition, this repository provides all the components required to replicate the experiment described in our paper, including testing tools and benchmark APIs.
 
-## Table of Contents
+### Table of Contents
 
 1. [Recommended Environment](#recommended-environment)
 2. [Setup](#setup)
@@ -13,14 +60,14 @@ In addition, this repository provides all the components required to replicate t
     - Deployment of the Rule Extractor Service
     - Run the Rule Validator
 
-## Recommended Environment
+### Recommended Environment
 
 This project has been tested and is known to work well on the following setup:
 
 - Ubuntu 20.04
 - Google Cloud EC2 machine with 24-core CPU and 128GB memory
 
-## Setup
+### Setup
 
 We provide a setup script to install the necessary packages and set up the environment for the project:
 
@@ -30,7 +77,7 @@ We provide a setup script to install the necessary packages and set up the envir
 
 It will take around 10 minutes.
 
-## Steps to Use NLP2REST
+### Steps to Use NLP2REST
 
 1. **REST API(s):** NLP2REST is designed to be applied to one or more target REST APIs. The APIs should be accessible at the URLs detailed in their OpenAPI specifications. We have provided several REST APIs in the [services](https://github.com/codingsoo/nlp2rest/tree/main/services) directory along with a manuscript for running these services. Alternatively, you can use any public APIs accessible online that have OpenAPI specifications. For a quick trial of our approach, we suggest using the [FDIC REST API](https://banks.data.fdic.gov/). This is an online API and its specification is available in our `specifications` directory.
 
