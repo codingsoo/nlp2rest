@@ -46,7 +46,7 @@ cd ../..
 cd ../..
 
 # Install MoREST
-cd tools/morest/fdic && pip install -r requirements.txt
+cd tools/morest && pip install -r requirements.txt
 cd ../../..
 
 # Install Docker
