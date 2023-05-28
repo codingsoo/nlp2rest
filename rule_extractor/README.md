@@ -1,34 +1,36 @@
 # NLP2REST's Rule Extractor
 
+Welcome to the NLP2REST's Rule Extractor, a tool designed to extract REST API rules from natural language descriptions. This document provides a step-by-step guide on how to set up and use the tool.
+
 ## Install requirements
 
-Please make sure you install all requirements in the root directory.
+To install the project dependencies, navigate to the root directory and run the following commands in your terminal:
 
 ```
 cd nlp2rest
 pip install -r requirements.txt
 ```
 
-This project has been tested using Python 3.9.
+This project has been successfully tested with Python 3.9. It is recommended to use this version for optimal compatibility.
 
-## Training the Model
+## Model Training
 
-Run the following commands in your terminal:
+To train the model, run the following command in your terminal:
 
 ```
 python3 train.py
 ```
 
-Note: Training the model will take approximately 20 hours.
+Please note that training the model can take a considerable amount of time, approximately 20 hours, depending on your hardware.
 
-You can also use the pre-trained models.
+As an alternative, you can utilize the pre-trained models provided:
 
 - [model](https://drive.google.com/file/d/1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF/view?usp=share_link)
 - [model_ngram](https://drive.google.com/file/d/1j1XA1dufDgqSkIGlQn97-WeKElaL8708/view?usp=share_link)
 
-Make sure to download both models and place them in this directory.
+Download these models and place them in this directory for use.
 
-## HTTP interface
+## Web interface
 
 To run the API, execute the `app.py` script using the following command:
 
