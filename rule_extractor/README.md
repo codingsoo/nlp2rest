@@ -8,6 +8,8 @@ To install the project dependencies, navigate to the root directory and run the 
 
 ```
 pip install -r requirements.txt
+python -m nltk.downloader stopwords
+python -m nltk.downloader wordnet
 ```
 
 This project has been successfully tested with Python 3.9. It is recommended to use this version for optimal compatibility.
