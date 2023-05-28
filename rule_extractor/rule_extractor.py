@@ -73,14 +73,14 @@ def extract_values(target_values, param_name, param_names):
     return values
 
 
-class RuleGenerator:
+class RuleExtractor:
     def __init__(self, settings_path, model_path):
         # Load settings
         with open(settings_path, 'r') as f:
             self.settings = yaml.safe_load(f)
 
         # Load the FastText model
-        fasttext_trainer = FastTextTrainer("APIs-guru/specifications", model_path)
+        fasttext_trainer = FastTextTrainer("../APIs-guru/specifications", model_path)
         self.model = fasttext_trainer.load_model(model_path)
 
         # Set up the Stanza pipeline
@@ -197,7 +197,7 @@ class RuleGenerator:
                     sbar_value.append(node.leaf_labels()[0])
                 self.process_sbar(child, sbar_rule, sbar_value, sbar_param, param_names)
 
-    def generate_rules(self, param_names, param_name, param_description):
+    def extract_rules(self, param_names, param_name, param_description):
         if param_description:
             if param_description[0] == "'" or param_description[0] == '"':
                 param_description = param_description[1:]
@@ -261,16 +261,16 @@ class RuleGenerator:
                             if values:
                                 rule = {"example": values}
                                 rules.append(rule)
-                    elif rule == "or":
+                    elif rule in ["Or", "OnlyOne", "AllOrNone", "ZeroOrOne"]:
                         if len(found_params) == 2 and found_params[0] != param_name and found_params[1] != param_name:
                             if sbar_value:
                                 rule = {"IPD": [
-                                    "IF " + param_name + " == " + sbar_value[0] + " THEN Or(" + param_name + "," +
+                                    "IF " + param_name + " == " + sbar_value[0] + " THEN " + rule + "(" + param_name + "," +
                                     found_params[0] + ")"]}
                                 if rule not in rules:
                                     rules.append(rule)
                         elif len(found_params) > 0 and found_params[0] != param_name:
-                            rule = {"IPD": ["Or(" + param_name + "," + found_params[0] + ")"]}
+                            rule = {"IPD": [rule + "(" + param_name + "," + found_params[0] + ")"]}
                             rules.append(rule)
                     elif rule == "requires":
                         if special_format_elements:

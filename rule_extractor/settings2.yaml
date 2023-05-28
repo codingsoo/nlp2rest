@@ -86,20 +86,12 @@ parameter:
     - "valid"
     - "require"
     - "only"
-  or:
+  Or:
     - "or"
-  onlyOne:
+  OnlyOne:
     - "only"
     - "one"
-  allOrNone:
+  AllOrNone:
     - "conjunction"
-  zeroOrOne:
+  ZeroOrOne:
     - "exclusive"
-  arithmeticRelational:
-    - "<="
-    - ">="
-    - "<"
-    - ">"
-    - "="
-    - "+"
-    - "-"

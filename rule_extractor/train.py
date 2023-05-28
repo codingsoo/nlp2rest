@@ -198,6 +198,6 @@ class FastTextTrainer:
             return Word2Vec.load(model_path)
         else:
             print(f"Training new model, as '{model_path}' not found.")
-            ft_trainer = FastTextTrainer(specs_dir="./APIs-guru/specifications", output_model_file=model_path)
+            ft_trainer = FastTextTrainer(specs_dir="../APIs-guru/specifications", output_model_file=model_path)
             ft_trainer.train_model()
             return Word2Vec.load(model_path)
