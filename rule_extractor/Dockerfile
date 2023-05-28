@@ -1,9 +1,9 @@
 FROM python:3.9
 
-COPY requirements.txt /temp/requirements.txt
+COPY ../requirements.txt /temp/requirements.txt
 RUN pip3 install --no-cache-dir -r /temp/requirements.txt
 
-COPY . .
+COPY .. .
 
 RUN python3 -m nltk.downloader stopwords
 
