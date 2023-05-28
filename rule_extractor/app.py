@@ -27,7 +27,7 @@ def extract_rules():
     data = request.get_json()
 
     param_names = data.get('param_names', [])
-    param_name = data.get('param_name', '')
+    param_name = data.get('param_name', 'requestBody')
     description = data.get('description', '')
 
     rules = rule_extractor.extract_rules(tuple(param_names), param_name, description)
