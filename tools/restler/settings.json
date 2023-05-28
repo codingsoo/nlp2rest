@@ -1,0 +1,32 @@
+{
+  "per_resource_settings": {},
+  "max_combinations": 20,
+  "fuzzing_mode": "bfs-cheap",
+  "no_ssl": true,
+  "disable_logging": true,
+  "test_combinations_settings": {
+    "header_param_combinations": {
+      "max_combinations": 50,
+      "param_kind": "required"
+    },
+    "query_param_combinations": {
+      "max_combinations": 50,
+      "param_kind": "required"
+    },
+    "example_payloads" : {
+      "payload_kind": "all"
+    }
+  },
+  "time_budget": 1,
+  "checkers": {
+    "useafterfree" : {
+      "mode" : "exhaustive"
+    },
+    "leakagerule" : {
+      "mode" : "normal"
+    },
+    "resourcehierarchy" : {
+      "mode" : "exhaustive"
+    }
+  }
+}

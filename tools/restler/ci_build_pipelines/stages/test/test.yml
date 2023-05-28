@@ -1,0 +1,26 @@
+stages:
+  - stage: Test
+    jobs:
+      - job: CompilerFunctionalTests
+        pool:
+          vmImage: 'windows-2022'
+        steps:
+          - template: steps/compilerFunctionalTests.yml
+
+      - job: EngineUnitTests
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - template: steps/engineUnitTests.yml
+
+      - job: QuickStartTests_Linux
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - template: steps/quickStartTests.yml
+
+      - job: QuickStartTests_Windows
+        pool:
+          vmImage: 'windows-2022'
+        steps:
+          - template: steps/quickStartTests.yml

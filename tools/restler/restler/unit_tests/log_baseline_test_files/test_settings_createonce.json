@@ -1,0 +1,18 @@
+{
+  "test_combinations_settings": {
+    "max_schema_combinations":  1
+  },
+    "per_resource_settings": {
+        "/item/{itemName}": {
+            "producer_timing_delay": 0,
+            "create_once": 0
+        },
+        "/city/{cityName}": {
+            "producer_timing_delay": 0,
+            "create_once": 1
+        },
+        "/farm/{farmName}/animal/{animalName}": {
+            "create_once": 0
+        }
+    }
+}

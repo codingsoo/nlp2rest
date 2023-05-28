@@ -1,0 +1,9 @@
+stages:
+  - stage: Build
+    jobs:
+      - job: RESTlerFullBuild
+        pool:
+          vmImage: 'windows-2022'
+        steps:
+          - template: steps/restlerfullbuild.yml
+

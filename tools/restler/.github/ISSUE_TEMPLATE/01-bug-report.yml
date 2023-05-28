@@ -1,0 +1,49 @@
+name: '🐞 Bug report'
+description: Report that something is not working as expected.
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a short description of the issue you are facing
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the steps you have taken so that we can reproduce the error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected results
+      description: Provide a description of what you expect to happen
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual results
+      description: Provide a description of what actually happens
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment details
+      description: |
+        Please provide:
+        - Operating system (Windows, macOS, Linux, other)
+        - Python version
+        - .NET version
+        - RESTler version
+        and any other details about your environment that may be relevant for the issue.
+
+        To get the Python version: run `python --version` or `python -V` in your terminal
+        To get the .NET version: run `dotnet --version` in your terminal
+        To get the RESTler version: run `restler --version`
+    validations:
+      required: false
+

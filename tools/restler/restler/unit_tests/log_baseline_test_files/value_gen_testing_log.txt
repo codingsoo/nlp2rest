@@ -1,0 +1,1937 @@
+2022-10-03 18:12:52.831: Will refresh token: python d:\git\restler-fuzzer\restler\unit_tests\authentication_test_files\unit_test_server_auth.py
+2022-10-03 18:12:52.931: New value: {'user1':{}, 'user2':{}}
+Authorization: valid_unit_test_token
+Authorization: shadow_unit_test_token
+2022-10-03 18:12:52.934: Successfully obtained the latest token
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A5E0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2022-10-03 18:12:52.953: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:52.955: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 5)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2022-10-03 18:12:52.970: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:52.972: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2022-10-03 18:12:52.983: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:52.986: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 3)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2022-10-03 18:12:52.998: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.000: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A0160>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2022-10-03 18:12:53.010: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.012: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A13A0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2022-10-03 18:12:53.024: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.026: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A18B0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1790>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1820>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A18B0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.074: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.076: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.078: Sending: 'POST /pass/1.1/A/uc/B/0/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.081: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A670>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 5)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A8B0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A670>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.096: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.097: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.099: Sending: 'POST /pass/2.2/A/so/B/1/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.103: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A670>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AF70>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.121: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.123: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.125: Sending: 'POST /pass/3.3/A/vrw6NMSyz/B/2/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.126: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A670>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AF70>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A670>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.142: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.144: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.146: Sending: 'POST /fail/1.1/A/%240jxn%22B%5EU/B/3/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.147: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1700>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1700>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1670>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1700>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.162: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.163: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.165: Sending: 'POST /fail/2.2/A/b2JVRkdRB/B/4/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.167: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A18B0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1700>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.182: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: LehlZhfZh\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.184: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.186: Sending: 'POST /fail/3.3/A/_%7BY03w%404%3F/B/0/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.188: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 2 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1040>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1D30>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1670>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1040>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.206: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.207: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.209: Sending: 'POST /pass/1.1/A/l9NfS9y/B/0/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.211: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 2 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A820>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 5)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A820>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.226: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.228: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.230: Sending: 'POST /pass/2.2/A/%26vl%2A0%3FQ/B/1/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.231: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 2 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AB80>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A820>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AB80>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.246: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.247: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.250: Sending: 'POST /pass/3.3/A/lLm/B/2/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.252: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 2 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A820>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AB80>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.270: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.272: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.274: Sending: 'POST /fail/1.1/A/u%27i/B/3/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.276: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 2 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1790>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.296: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.297: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.299: Sending: 'POST /fail/2.2/A/0yfrCX1iGO/B/4/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.301: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 2 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A10D0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1700>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A10D0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.315: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: Yj\r*L+6&S\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.317: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.319: Sending: 'POST /fail/3.3/A/y%5Er14%27T+~%7B/B/0/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.321: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 3 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1AF0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A19D0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1AF0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.340: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.342: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.344: Sending: 'POST /pass/1.1/A/0/B/0/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.347: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 3 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 5)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A9D0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AB80>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.367: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.370: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.373: Sending: 'POST /pass/2.2/A/%0A/B/1/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.375: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 3 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A9D0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AA60>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A9D0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.395: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.397: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.401: Sending: 'POST /pass/3.3/A/OS3NxHmKaju/B/2/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.403: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 3 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AF70>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A9D0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AF70>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.419: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.421: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.423: Sending: 'POST /fail/1.1/A/%3B%2Ax%214g%0BsDSt/B/3/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.424: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 3 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A9D0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AF70>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.439: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.442: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.444: Sending: 'POST /fail/2.2/A/T5t1TsZsgI/B/4/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.446: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 3 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1280>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.461: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: gqnOvlFcg9m\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.463: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.464: Sending: 'POST /fail/3.3/A/Mx%3C%3EcbN3x%27/B/0/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.466: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 4 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1AF0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1C10>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.483: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.485: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.487: Sending: 'POST /pass/1.1/A/5Mx/B/0/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.488: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 4 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1AF0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 5)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1940>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1AF0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.502: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.504: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.505: Sending: 'POST /pass/2.2/A/%0D%226/B/1/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.507: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 4 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AC10>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.522: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.524: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.525: Sending: 'POST /pass/3.3/A/mnx/B/2/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.527: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 4 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A550>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.541: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.543: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.544: Sending: 'POST /fail/1.1/A/9Ts/B/3/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.546: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 4 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A550>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A940>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.561: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.563: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.565: Sending: 'POST /fail/2.2/A/WSnfn9Kklh/B/4/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.567: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 4 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1280>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1280>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1C10>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1280>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.582: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: z,@|g&\n5&[y\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.584: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.586: Sending: 'POST /fail/3.3/A/%3F%5C2Q.kNp%23%0C/B/0/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.588: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 5 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1DC0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1670>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.605: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.608: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.609: Sending: 'POST /pass/1.1/A/MgCw/B/0/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.611: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 5 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1DC0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 5)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1820>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1DC0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.624: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.625: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.627: Sending: 'POST /pass/2.2/A/%3FaXM/B/1/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.630: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 5 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1820>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1DC0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1B80>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.647: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.650: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.652: Sending: 'POST /pass/3.3/A/zQ2E4tEEPmL/B/2/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.653: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 5 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ADC0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A5E0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.671: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.673: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.675: Sending: 'POST /fail/1.1/A/ly%0A%60%3E3ep%3B%5BW/B/3/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.676: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 5 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A5E0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.691: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.694: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.696: Sending: 'POST /fail/2.2/A/ef1cnca0uj/B/4/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.698: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 5 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A5E0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A5E0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.713: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: h5PaQ32\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.714: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.716: Sending: 'POST /fail/3.3/A/e%24%0AO%7BOV%26%3D./B/0/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.720: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 6 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.737: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.739: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.741: Sending: 'POST /pass/1.1/A/U4/B/0/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.742: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 6 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 5)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1A60>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1CA0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.758: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.760: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.761: Sending: 'POST /pass/2.2/A/kR/B/1/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.763: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 6 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1820>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1CA0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1160>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F00A1820>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.778: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.779: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.781: Sending: 'POST /pass/3.3/A/z808Lo1b2Ts/B/2/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.783: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 6 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ADC0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006A8B0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AEE0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.797: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.798: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.802: Sending: 'POST /fail/1.1/A/VxNq%3F%3ACCg~n/B/3/C/int HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.803: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 6 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AAF0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ADC0>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.818: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.819: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.821: Sending: 'POST /fail/2.2/A/dczE1SPj/B/4/C/number HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.823: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 6 / 6)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Value-generated: '
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+	Request hash: 7a15d09ce9ad6f1adbed63be98c58d88ffe8a153
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		+ restler_custom_payload: [pass, fail, ...]
+		- restler_static_string: '/'
+		+ restler_fuzzable_number: [1.1, 2.2, ...]
+		- restler_static_string: '/A/'
+		- restler_fuzzable_string: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ADC0>
+		- restler_static_string: '/B/'
+		- restler_fuzzable_int: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006AD30>
+		- restler_static_string: '/C/'
+		- restler_custom_payload: <function CandidateValuesPool.get_candidate_values.<locals>.get_custom_value_generator.<locals>.value_generator_wrapper at 0x00000232F006ACA0>
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: [token_refresh_cmd, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"reader": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2022-10-03 18:12:53.843: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nValue-generated: |#C$f(J\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2022-10-03 18:12:53.845: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2022-10-03 18:12:53.847: Sending: 'POST /fail/3.3/A/%0BFZC4Lf3/B/0/C/string HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 15\r\n\r\n{"reader": "A"}'
+
+2022-10-03 18:12:53.850: Received: 'HTTP/1.1 405 Method Not Allowed\r\nRestler Test\r\n\r\n{"error": "Method, POST, not supported"}'
+

@@ -1,0 +1,131 @@
+{
+  "client_certificate_path": "\\path\\to\\file.pem",
+  "max_combinations": 20,
+  "test_combinations_settings": {
+    "header_param_combinations": {
+      "max_combinations": 10,
+      "param_kind": "optional"
+    },
+    "query_param_combinations": {
+      "max_combinations": 15,
+      "param_kind": "required"
+    },
+    "example_payloads": {
+      "payload_kind": "all"
+    },
+    "max_examples": 100,
+    "max_schema_combinations": 30
+  },
+  "max_request_execution_time": 90,
+  "save_results_in_fixed_dirname": false,
+  "global_producer_timing_delay": 2,
+  "dyn_objects_cache_size": 200,
+  "fuzzing_jobs": 2,
+  "fuzzing_mode": "directed-smoke-test",
+  "garbage_collection_interval": 30,
+  "reconnect_on_every_request": false,
+  "ignore_dependencies": true,
+  "ignore_feedback": true,
+  "include_user_agent": true,
+  "run_gc_after_every_sequence": true,
+  "max_async_resource_creation_time": 45,
+  "max_sequence_length": 11,
+  "no_ssl": true,
+  "disable_cert_validation": true,
+  "disable_logging": true,
+  "no_tokens_in_logs": true,
+  "path_regex": "(\\w*)/blog/posts(\\w*)",
+  "ignore_decoding_failures": true,
+  "request_throttle_ms": 500,
+  "custom_retry_settings": {
+    "status_codes": [
+      "429"
+    ],
+    "response_text": [
+      "please re-try"
+    ],
+    "interval_sec": 5
+  },
+  "target_ip": "100.100.100.100",
+  "target_port": 500,
+  "time_budget": 12,
+  "token_refresh_cmd": "some refresh command",
+  "add_fuzzable_dates": true,
+  "token_refresh_interval": 60,
+  "wait_for_async_resource_creation": false,
+  "custom_value_generators": "c:\\restler\\Compile\\custom_value_generators.py",
+  "per_resource_settings": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}": {
+      "producer_timing_delay": 1,
+      "create_once": 1,
+      "custom_dictionary": "c:\\restler\\custom_dict1.json"
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}": {
+      "producer_timing_delay": 5,
+      "custom_dictionary": "c:\\restler\\custom_dict2.json"
+    }
+  },
+  "sequence_exploration_settings": {
+    "create_prefix_once": [
+      {
+        "methods": [ "GET", "HEAD" ],
+        "endpoints": "*",
+        "reset_after_success": false
+      }
+    ]
+  },
+  "include_requests": [
+    {
+      "endpoint": "/blog/included/1"
+    },
+    {
+      "endpoint": "/blog/included/2",
+      "methods": ["PUT"]
+    }
+  ],
+  "max_logged_request_combinations": 5,
+  "exclude_requests": [
+    {
+      "endpoint": "/blog/excluded/1"
+    },
+    {
+      "endpoint": "/blog/included/1",
+      "methods": ["GET"]
+    }
+  ],
+  "checkers": {
+    "namespacerule": {
+      "mode": "exhaustive"
+    },
+    "useafterfree": {
+      "mode": "exhaustive"
+    },
+    "leakagerule": {
+      "mode": "exhaustive"
+    },
+    "resourcehierarchy": {
+      "mode": "exhaustive"
+    },
+    "payloadbody": {
+      "mode": "normal",
+      "start_with_valid": true,
+      "start_with_examples": true,
+      "size_dep_budget": false,
+      "use_feedback": true,
+      "recipe_file": "C:\\restler\\restlerpayloadbody\\recipe_custom.json"
+    },
+    "invalidvalue": {
+      "custom_dictionary": "C:\\restler\\invalidvalue\\dict.json",
+      "max_combinations": 100
+    }
+  },
+  "custom_bug_codes": [
+    "400",
+    "2?4",
+    "3*"
+  ],
+  "custom_non_bug_codes": [
+    "404",
+    "500"
+  ]
+}

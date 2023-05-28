@@ -1,0 +1,225 @@
+2021-06-01 18:17:04.893: Will refresh token: python D:\git\restler-fuzzer\restler\unit_tests\authentication_test_files\unit_test_server_auth.py
+2021-06-01 18:17:04.988: New value: {'user1':{}, 'user2':{}}
+Authorization: valid_unit_test_token
+Authorization: shadow_unit_test_token
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 23db74a21a5b43c1601d160252a5cd1b7ae89805
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/B/B'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+2021-06-01 18:17:05.117: Sending: 'PUT /B/B HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:05.127: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "B"}'
+
+
+Generation-1: Rendering Sequence-2
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 44414ad093616e18a9e2f845ae9d453eb6e4c8bc
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+2021-06-01 18:17:05.262: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:05.272: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+
+Generation-3: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/B/B'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Remaining candidate combinations: 1)
+	Request hash: 2d217a8041860f0742efe1b22a09893cd0e89ca5
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/C'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"A": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '", "B": "'
+		- restler_static_string: '_READER_DELIM_post_b_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2021-06-01 18:17:05.720: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:05.730: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2021-06-01 18:17:05.743: Sending: 'PUT /B/B HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:05.754: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "B"}'
+
+2021-06-01 18:17:05.767: Sending: 'GET /C HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 20\r\n\r\n{"A": "A", "B": "B"}'
+
+2021-06-01 18:17:05.778: Received: 'HTTP/1.1 200 OK\r\nRestler Test\r\n\r\n{"C": {}}'
+
+
+Generation-3: Rendering Sequence-2
+
+	Request: 1 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/B/B'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Remaining candidate combinations: 1)
+	Request hash: a3b2722ed766df82f0d1d1aafd2e81f23d4a0aa2
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/D/D'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"A": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '", "B": "'
+		- restler_static_string: '_READER_DELIM_post_b_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2021-06-01 18:17:06.247: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:06.258: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2021-06-01 18:17:06.268: Sending: 'PUT /B/B HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:06.278: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "B"}'
+
+2021-06-01 18:17:06.290: Sending: 'PUT /D/D HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 22\r\n\r\n{"A": "A", "B": "B"}\r\n'
+
+2021-06-01 18:17:06.301: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "D"}'
+
+
+Generation-4: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/A/A'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/B/B'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Current combination: 1 / 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/D/D'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"A": "'
+		- restler_static_string: '_READER_DELIM_post_a_READER_DELIM'
+		- restler_static_string: '", "B": "'
+		- restler_static_string: '_READER_DELIM_post_b_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 4 (Remaining candidate combinations: 1)
+	Request hash: fb149c026c182b9719b5b5b37ef0ef3f0950c55a
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/E'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: unittest\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '"D": "'
+		- restler_static_string: '_READER_DELIM_post_d_READER_DELIM'
+		- restler_static_string: '"'
+		- restler_static_string: '}'
+
+2021-06-01 18:17:06.956: Sending: 'PUT /A/A HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:06.969: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "A"}'
+
+2021-06-01 18:17:06.982: Sending: 'PUT /B/B HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 0\r\n\r\n'
+
+2021-06-01 18:17:06.993: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "B"}'
+
+2021-06-01 18:17:07.004: Sending: 'PUT /D/D HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 22\r\n\r\n{"A": "A", "B": "B"}\r\n'
+
+2021-06-01 18:17:07.017: Received: 'HTTP/1.1 201 Created\r\nRestler Test\r\n\r\n{"name": "D"}'
+
+2021-06-01 18:17:07.029: Sending: 'GET /E HTTP/1.1\r\nAccept: application/json\r\nHost: unittest\r\nContent-Type: application/json\r\nAuthorization: valid_unit_test_token\r\nContent-Length: 10\r\n\r\n{"D": "D"}'
+
+2021-06-01 18:17:07.041: Received: 'HTTP/1.1 200 OK\r\nRestler Test\r\n\r\n{"E": {}}'
+

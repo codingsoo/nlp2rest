@@ -1,0 +1,51 @@
+{
+  "restler_fuzzable_string": [
+    "fuzzstring",
+    "enable"
+  ],
+  "restler_fuzzable_datetime": [ "2021-01-01", "2021-10-01" ],
+  "restler_fuzzable_date": [ "2022-01-01" ],
+  "restler_fuzzable_date_unquoted": [ "2023-01-01" ],
+  "restler_fuzzable_int": [
+    "0",
+    "1"
+  ],
+  "restler_fuzzable_bool_unquoted": [
+    "true",
+    "false"
+  ],
+  "restler_custom_payload": {
+    "api-version": [
+      "2019-04-01"
+    ],
+    "location": [
+      "centralus"
+    ],
+    "testcustomparts": [
+      "testcustompart"
+    ]
+  },
+  "restler_custom_payload_unquoted": {
+    "testquote": [
+      "5"
+    ],
+    "location": [
+      "10"
+    ]
+  },
+  "restler_custom_payload_uuid4_suffix": {
+    "cityName": "cityName<test!>-",
+    "houseName": "houseName<test!>-",
+    "colorName": "colorName<test!>-",
+    "itemName": "itemName<test!>-",
+    "farmName": "farmName<test!>-",
+    "animalName": "animalName<test!>-",
+    "roadName": "roadName<test!>-",
+    "groupName": "groupName<test!>-",
+    "leakageTest": "leakageTest<test!>-",
+    "useafterfreeTest": "useafterfreeTest<test!>-",
+    "resourcehierarchyTest": "resourcehierarchyTest<test!>-",
+    "resourcehierarchyChild": "resourcehierarchyChild<test!>-",
+    "namespaceruleTest": "namespaceruletest<test!>-"
+  }
+}
