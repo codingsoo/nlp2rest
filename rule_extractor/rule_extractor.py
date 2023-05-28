@@ -80,7 +80,7 @@ class RuleExtractor:
             self.settings = yaml.safe_load(f)
 
         # Load the FastText model
-        fasttext_trainer = FastTextTrainer("../APIs-guru/specifications", model_path)
+        fasttext_trainer = FastTextTrainer("./APIs-guru/specifications", model_path)
         self.model = fasttext_trainer.load_model(model_path)
 
         # Set up the Stanza pipeline

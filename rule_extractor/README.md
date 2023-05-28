@@ -89,13 +89,13 @@ The script accepts the following options:
 For example, to train a model, you might run:
 
 ```
-python nlp2rest.py --train --specs_dir ../specs --output_model_file ./rest_model
+python nlp2rest.py --train --specs_dir ./APIs-guru/specifications --output_model_file ./rest_model
 ```
 
 And to extract rules, you might run:
 
 ```
-python nlp2rest.py --extract_rules --spec_path ./openapi_spec.yaml --settings ./settings2.yaml --model_name rest_model
+python nlp2rest.py --extract_rules --spec_path ../specifications/swagger/fdic.yaml --settings ./settings2.yaml --model_name rest_model
 ```
 
 The extracted rules are saved to a file named `found_rules.json` in the project root directory.
