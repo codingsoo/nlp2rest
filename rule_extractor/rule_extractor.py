@@ -319,4 +319,4 @@ class RuleExtractor:
                                 rules_dict[key].append(values)
 
             rules_dict = dict(rules_dict)
-            return rules_dict
+            return {param_name: rules_dict}
