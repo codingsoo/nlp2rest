@@ -6,6 +6,7 @@ RUN pip3 install --no-cache-dir -r /temp/requirements.txt
 COPY .. .
 
 RUN python3 -m nltk.downloader stopwords
+RUN python3 -m nltk.downloader wordnet
 
 EXPOSE 4000
 
