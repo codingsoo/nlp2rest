@@ -37,11 +37,12 @@ docker run -p 4000:4000 rex
 
 4. Run Rule Validator:
 
-Firstly, adjust the `specificationFileName` in the `rtg_config.json` file to point to the rest-countries specification. Then, use Gradle to run the project as follows:
+Firstly, adjust the `specificationFileName` in the `rtg_config.json` file to point to the desired specification. We preconfigured the file to use the specification of rest-countries, and our NLP-based strategy (named `NlpStrategy`). Then, use Gradle to run the Rule Validator as follows:
 
 ```
 ./gradlew run
 ```
+> To run the above command, the `gradlew` file must be executable. Make it executable with `sudo chmod +x gradlew`
 
 This will generate an enhanced specification in the `output` directory.
 
