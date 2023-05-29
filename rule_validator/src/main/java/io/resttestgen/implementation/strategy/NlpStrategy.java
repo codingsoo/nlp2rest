@@ -48,7 +48,7 @@ public class NlpStrategy extends Strategy {
 
         // Check if the rule generator is online
         if (!RuleExtractorProxy.isOnline()) {
-            logger.warn("Rule generator is not reachable. Make sure you ran it and it is reachable at the URL specified in the RuleGenerator class.");
+            logger.warn("Rule generator is not reachable. Make sure you ran it and it is reachable at the baseUrl specified in the RuleGeneratorProxy class.");
             return;
         }
 
