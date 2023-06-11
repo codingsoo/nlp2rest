@@ -14,12 +14,12 @@ Before running the script, ensure that the following dependencies are installed 
 - Docker
 - Java 8 and Java 11 (depending on the service)
 - mitmproxy
-- 
+
 Please ensure that "python" is aliased to Python 3.x and the paths for Java 8 and Java 11 are correctly specified in `java8.env` and `java11.env`.
 
 ## How to Use
 
-The script can be executed from the command line using the following syntax:
+First, Please ensure that the paths to Java 8 and Java 11 are correctly defined in the `java8.env` and `java11.env` files respectively. Then, the script can be executed from the command line using the following syntax:
 
 ```
 python run_service.py <service_name> <token>
