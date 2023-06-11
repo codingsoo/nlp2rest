@@ -19,6 +19,12 @@ Please ensure that "python" is aliased to Python 3.x and the paths for Java 8 an
 
 ## How to Use
 
+Install services using `setup.sh` script.
+
+```
+sh setup.sh
+```
+
 The script can be executed from the command line using the following syntax:
 
 ```
