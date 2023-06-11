@@ -6,7 +6,7 @@ This section provides a comprehensive guide to setting up an artifact and valida
 
 1. Setup environment:
 
-Start by setting up your environment. This can be done by executing the setup script in your terminal as shown below:
+First, Please ensure that the paths to Java 8 and Java 11 are correctly defined in the `java8.env` and `java11.env` files respectively. Then, start by setting up your environment. This can be done by executing the setup script in your terminal as shown below:
 
 ```
 sh setup.sh
