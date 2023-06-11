@@ -51,9 +51,9 @@ The script supports the following services:
 - Language Tool: Runs the Language Tool server and its reverse proxy.
 - OCVN: Runs the OCVN server and its reverse proxy.
 - Ohsome: Runs a reverse proxy for Ohsome.
-- OMDB: Runs a reverse proxy for OMDB.
+- OMDB: Runs a reverse proxy for OMDB. Obtain a OMDB API key by visiting https://www.omdbapi.com/apikey.aspx. After obtaining the key, replace `YOUR_TOKEN_HERE` with your API key in the `omdb.py` file.
 - Rest Countries: Runs a reverse proxy for Rest Countries.
-- Spotify: Runs a reverse proxy for Spotify.
+- Spotify: Runs a reverse proxy for Spotify. Obtain a Spotify API key by visiting https://developer.spotify.com/console/get-playlists/ and clicking "Get Token". You'll need to provide this token when executing the service running script.
 - YouTube: Runs the YouTube server and its reverse proxy.
 - All: Runs all of the above services.
 
