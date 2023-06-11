@@ -31,7 +31,7 @@ python -m nltk.downloader stopwords
 python -m nltk.downloader wordnet
 ```
 
-This project has been successfully tested with Python 3.9. It is recommended to use this version for optimal compatibility.
+This project has been thoroughly tested and validated with Python 3.9. For optimal compatibility, we highly recommend using this version. Additionally, we suggest using a virtual environment to ensure smooth operation and avoid potential conflicts among dependencies.
 
 ## Model training
 
