@@ -34,15 +34,15 @@ unzip evomaster.jar.zip
 rm evomaster.jar.zip
 
 # Install RESTest
-. ./services/java8.env && cd tools/restest && sh scripts/install_dependencies.sh && mvn clean install -DskipTests
+. ./java8.env && cd tools/restest && sh scripts/install_dependencies.sh && mvn clean install -DskipTests
 cd ../..
 
 # Install RestTestGen
-. ./services/java11.env && cd tools/resttestgen && ./gradlew install
+. ./java11.env && cd tools/resttestgen && ./gradlew install
 cd ../..
 
 # Install bBOXRT
-. ./services/java11.env && cd tools/bboxrt && mvn clean install -DskipTests
+. ./java11.env && cd tools/bboxrt && mvn clean install -DskipTests
 cd ../..
 
 # Install MoREST
@@ -57,13 +57,13 @@ wget https://repo1.maven.org/maven2/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco
 wget https://repo1.maven.org/maven2/org/jacoco/org.jacoco.cli/0.8.7/org.jacoco.cli-0.8.7-nodeps.jar
 
 # Install Evo Bench
-. ./services/java8.env && cd services/emb && mvn clean install -DskipTests && mvn dependency:build-classpath -Dmdep.outputFile=cp.txt
+. ./java8.env && cd services/emb && mvn clean install -DskipTests && mvn dependency:build-classpath -Dmdep.outputFile=cp.txt
 cd ../..
 
 # Install Genome-Nexus
-. ./services/java8.env && cd services/genome-nexus && mvn clean install -DskipTests
+. ./java8.env && cd services/genome-nexus && mvn clean install -DskipTests
 cd ../..
 
 # Install YouTube Mock service
-. ./services/java11.env && cd services/youtube && mvn clean install -DskipTests && mvn dependency:build-classpath -Dmdep.outputFile=cp.txt
+. ./java11.env && cd services/youtube && mvn clean install -DskipTests && mvn dependency:build-classpath -Dmdep.outputFile=cp.txt
 cd ../..
