@@ -30,7 +30,7 @@ sudo apt-get install -y dotnet-sdk-6.0
 rm packages-microsoft-prod.deb
 
 # Install RESTler
-. DEFAULT_DIR/venv/bin/activate && cd DEFAULT_DIR/tools/restler && mkdir restler_bin && python ./build-restler.py --dest_dir ./restler_bin
+. ./venv/bin/activate && cd DEFAULT_DIR/tools/restler && mkdir restler_bin && python ./build-restler.py --dest_dir ./restler_bin
 
 # Install Schemathesis
 cd DEFAULT_DIR
