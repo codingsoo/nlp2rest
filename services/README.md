@@ -15,15 +15,9 @@ Before running the script, ensure that the following dependencies are installed 
 - Java 8 and Java 11 (depending on the service)
 - mitmproxy
 
-Please ensure that "python" is aliased to Python 3.x and the paths for Java 8 and Java 11 are correctly specified in `java8.env` and `java11.env` with executable permission.
+Please ensure that "python" is aliased to Python 3.x and the paths for Java 8 and Java 11 are correctly specified in `java8.env` and `java11.env`.
 
 ## How to Use
-
-Install services using `setup.sh` script.
-
-```
-sh setup.sh
-```
 
 The script can be executed from the command line using the following syntax:
 
