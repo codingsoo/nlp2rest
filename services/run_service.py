@@ -19,7 +19,7 @@ def run_service(service_path, class_name, port_number):
     elif "ocvn" in service_path:
         with open(service_path + "/run.sh", 'w') as f:
             f.write(
-                "java " + cov + port_number + ".exec" + " -cp target/classes:target/test-classes:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:" + base + "/services/emb/cs/rest-gui/ocvn/web/target/classes:" + cp + ' ' + class_name)
+                "java " + cov + port_number + ".exec" + " -cp target/classes:target/test-classes:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:" + base + "/emb/cs/rest-gui/ocvn/web/target/classes:" + cp + ' ' + class_name)
         subprocess.run(
             ". ./java8.env && cd " + service_path + " && tmux new-session -d -s ocvn-server 'sudo sh run.sh'",
             shell=True)
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     token = sys.argv[2]
     base = os.getcwd()
 
-    cov = "-javaagent:" + base + "/org.jacoco.agent-0.8.7-runtime.jar=destfile=jacoco"
+    cov = "-javaagent:" + base + "/../org.jacoco.agent-0.8.7-runtime.jar=destfile=jacoco"
 
     if name == "fdic":
         subprocess.run("tmux new -d -s fdic-proxy 'LOG_FILE=log-fdic.txt mitmproxy --mode reverse:https://banks.data.fdic.gov -p 9001 -s proxy.py'", shell=True)
@@ -47,7 +47,7 @@ if __name__ == "__main__":
         subprocess.run("sudo docker run --name=gn-mongo --restart=always -p 27018:27017 -d genomenexus/gn-mongo:latest", shell=True)
         time.sleep(30)
         subprocess.run(
-            "tmux new -d -s genome-nexus-server '. ./java8.env && java " + cov + "9002.exec" + " -jar ./services/genome-nexus/web/target/web-0-unknown-version-SNAPSHOT.war'",
+            "tmux new -d -s genome-nexus-server '. ./java8.env && java " + cov + "9002.exec" + " -jar ./genome-nexus/web/target/web-0-unknown-version-SNAPSHOT.war'",
             shell=True)
         subprocess.run(
             "tmux new -d -s genome-nexus-proxy 'LOG_FILE=log-genome-nexus.txt mitmproxy --mode reverse:http://0.0.0.0:50110 -p 9002 -s proxy.py'",
@@ -71,15 +71,15 @@ if __name__ == "__main__":
     elif name == "rest-countries":
         subprocess.run("tmux new -d -s rest-countries-proxy 'LOG_FILE=log-rest-countries.txt mitmproxy --mode reverse:https://restcountries.com -p 9007 -s proxy.py'", shell=True)
     elif name == "spotify":
-        with open("spotify.py", "r") as file:
-            content = file.read()
+#        with open("spotify.py", "r") as file:
+#            content = file.read()
 
-        content = content.replace("TOKEN_HERE", token)
+#        content = content.replace("TOKEN_HERE", token)
 
-        with open("spotify.py", "w") as file:
-            file.write(content)
+#        with open("spotify.py", "w") as file:
+#            file.write(content)
         subprocess.run("tmux new -d -s spotify-proxy 'LOG_FILE=log-spotify.txt mitmproxy --mode reverse:https://api.spotify.com -p 9008 -s proxy.py'", shell=True)
-        subprocess.run("python ./spotify_setting.py " + token, shell=True)
+#        subprocess.run("python3 ./spotify_setting.py " + token, shell=True)
     elif name == "youtube":
         run_service("youtube", "youtube.api.Application", "9009")
         subprocess.run(
@@ -95,7 +95,7 @@ if __name__ == "__main__":
                        shell=True)
         time.sleep(30)
         subprocess.run(
-            "tmux new -d -s genome-nexus-server '. ./java8.env && java " + cov + "9002.exec" + " -jar ./services/genome-nexus/web/target/web-0-unknown-version-SNAPSHOT.war'",
+            "tmux new -d -s genome-nexus-server '. ./java8.env && java " + cov + "9002.exec" + " -jar ./genome-nexus/web/target/web-0-unknown-version-SNAPSHOT.war'",
             shell=True)
         subprocess.run(
             "tmux new -d -s genome-nexus-proxy 'LOG_FILE=log-genome-nexus.txt mitmproxy --mode reverse:http://0.0.0.0:50110 -p 9002 -s proxy.py'",
@@ -120,17 +120,17 @@ if __name__ == "__main__":
         subprocess.run(
             "tmux new -d -s rest-countries-proxy 'LOG_FILE=log-rest-countries.txt mitmproxy --mode reverse:https://restcountries.com -p 9007 -s proxy.py'",
             shell=True)
-        with open("spotify.py", "r") as file:
-            content = file.read()
+#        with open("spotify.py", "r") as file:
+#            content = file.read()
 
-        content = content.replace("TOKEN_HERE", token)
+#        content = content.replace("TOKEN_HERE", token)
 
-        with open("spotify.py", "w") as file:
-            file.write(content)
+#        with open("spotify.py", "w") as file:
+#            file.write(content)
         subprocess.run(
             "tmux new -d -s spotify-proxy 'LOG_FILE=log-spotify.txt mitmproxy --mode reverse:https://api.spotify.com -p 9008 -s proxy.py'",
             shell=True)
-        subprocess.run("python ./spotify_setting.py " + token, shell=True)
+#        subprocess.run("python3 ./spotify_setting.py " + token, shell=True)
         run_service("youtube", "youtube.api.Application", "9009")
         subprocess.run(
             "tmux new -d -s youtube-proxy 'LOG_FILE=log-youtube.txt mitmproxy --mode reverse:http://0.0.0.0:8080 -p 9009 -s proxy.py'",
