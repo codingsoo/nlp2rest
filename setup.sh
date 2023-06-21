@@ -61,6 +61,7 @@ cd tools/morest && pip install -r requirements.txt
 sudo apt-get install -y docker.io
 
 # Install Jacoco
+cd $DEFAULT_DIR
 wget https://repo1.maven.org/maven2/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar
 wget https://repo1.maven.org/maven2/org/jacoco/org.jacoco.cli/0.8.7/org.jacoco.cli-0.8.7-nodeps.jar
 
