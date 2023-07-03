@@ -7,7 +7,7 @@
    },
    "servers": [
       {
-         "url": "http://localhost:9007/v2"
+         "url": "http://localhost:9003/v2"
       }
    ],
    "paths": {
