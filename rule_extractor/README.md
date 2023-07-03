@@ -10,6 +10,11 @@ First, download the following pretrained models in the current directory:
 - [model](https://drive.google.com/file/d/1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF/view?usp=share_link)
 - [model_ngram](https://drive.google.com/file/d/1j1XA1dufDgqSkIGlQn97-WeKElaL8708/view?usp=share_link)
 
+```
+wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF' -O rest_model
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&confirm=any_non_empty_string_here&id=1j1XA1dufDgqSkIGlQn97-WeKElaL8708' -O rest_model.wv.vectors_ngrams.npy
+```
+
 Then, build and run the docker image with:
 ```
 docker build -t rex .
