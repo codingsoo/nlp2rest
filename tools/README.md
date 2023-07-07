@@ -37,6 +37,10 @@ Any errors should be reported directly to the Schemathesis repository: https://g
 
 For Tcases, use the script provided at https://github.com/codingsoo/nlp2rest/blob/main/tools/tcases/tool.sh. Ensure that you replace `$SPEC_HERE` with the correct specification path. For tool-related errors, report them directly to the Tcases repository: https://github.com/Cornutum/tcases. For script-related issues, please reach out to us.
 
+## bBOXRT
+
+For Tcases, use the script provided at [https://github.com/codingsoo/nlp2rest/blob/main/tools/tcases/tool.sh](https://github.com/codingsoo/nlp2rest/blob/main/tools/bboxrt/tool.sh). Ensure that you replace `$SPEC_HERE` with the correct specification path. For tool-related errors, report them directly (As there's no official repository, errors should be reported directly to the authors [here](https://ieeexplore.ieee.org/document/9344640)). For script-related issues, please reach out to us.
+
 ## Other Tools
 
 For the rest of the tools, please refer to the README files in each tool's respective directory. These documents provide comprehensive instructions on how to utilize each tool.
@@ -46,5 +50,4 @@ In case you encounter any errors, report them directly to the respective develop
 - RESTest: https://github.com/isa-group/RESTest
 - RESTler: https://github.com/microsoft/restler-fuzzer
 - RestTestGen: https://github.com/SeUniVr/RestTestGen
-- bBOXRT: As there's no official repository, errors should be reported directly to the authors [here](https://ieeexplore.ieee.org/document/9344640)
-- Morest: Similarly, errors should be reported directly to the authors [here](https://dl.acm.org/doi/10.1145/3510003.3510133)
+- Morest: Errors should be reported directly to the authors [here](https://dl.acm.org/doi/10.1145/3510003.3510133)
