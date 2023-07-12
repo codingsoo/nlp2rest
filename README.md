@@ -1,5 +1,9 @@
 # Enhancing REST API Testing with NLP Techniques
 
+## Announcement
+
+We are currently aware of issues affecting the validation module in our project, specifically problems related to incorrect specification generation and excessive running times. Our team is actively working on resolving these issues. We understand that these problems may be impacting your use of the software, and we sincerely apologize for any inconvenience caused.
+
 ## Getting Started
 
 This section provides a comprehensive guide to setting up an artifact and validating its functionality using a simple example. The setup process was successfully tested on a Google Cloud EC2 machine using an Ubuntu 20.04 image.
