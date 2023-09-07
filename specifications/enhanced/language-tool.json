@@ -1,0 +1,155 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "LanguageTool API",
+        "description": "Check texts for style and grammar issues with LanguageTool. See <a\nhref='http://wiki.languagetool.org/public-http-api'>our wiki</a> for access limitations.",
+        "version": "1.0.2"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:9003/v2"
+        }
+    ],
+    "paths": {
+        "/languages": {
+            "get": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Response description currently not supported by RestTestGen.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "code": {
+                                                "description": "a language code like 'en'",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "a language name like 'French' or 'English (Australia)'",
+                                                "type": "string"
+                                            },
+                                            "longCode": {
+                                                "description": "a language code like 'en-US' or 'ca-ES-valencia'",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "code",
+                                            "name",
+                                            "longCode"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-dependencies": []
+            }
+        },
+        "/check": {
+            "post": {
+                "description": "The main feature - check a text with LanguageTool for possible\nstyle and grammar issues.",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "preferredVariants": {
+                                        "type": "array",
+                                        "items": {
+                                            "description": "Comma-separated list of preferred language variants.\nThe language detector used with `language=auto` can detect e.g.\nEnglish, but it cannot decide whether British English or American\nEnglish is used. Thus this parameter can be used to specify the\npreferred variants like `en-GB` and `de-AT`. Only available with\n`language=auto`.",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "motherTongue": {
+                                        "description": "A language code of the user's native language, enabling\nfalse friends checks for some language pairs.",
+                                        "type": "string"
+                                    },
+                                    "enabledRules": {
+                                        "description": "IDs of rules to be enabled, comma-separated",
+                                        "type": "string"
+                                    },
+                                    "data": {
+                                        "description": "The text to be checked, given as a JSON document that specifies what's text and what's markup. This or 'text' is required. Markup will be ignored when looking for errors. Example text: <pre>A &lt;b>test&lt;/b></pre>JSON for the example text: <pre>{\"annotation\":[\n {\"text\": \"A \"},\n {\"markup\": \"&lt;b>\"},\n {\"text\": \"test\"},\n {\"markup\": \"&lt;/b>\"}\n]}</pre> <p>If you have markup that should be interpreted as whitespace, like <tt>&lt;p&gt;</tt> in HTML, you can have it interpreted like this: <pre>{\"markup\": \"&lt;p&gt;\", \"interpretAs\": \"\\n\\n\"}</pre><p>The 'data' feature is not limited to HTML or XML, it can be used for any kind of markup.",
+                                        "type": "string",
+                                        "example": [
+                                            "{\"annotation\":[\n {\"text\": \"A \"}",
+                                            "{\"text\": \"test\"}"
+                                        ]
+                                    },
+                                    "enabledCategories": {
+                                        "description": "IDs of categories to be enabled, comma-separated",
+                                        "type": "string"
+                                    },
+                                    "enabledOnly": {
+                                        "description": "If true, only the rules and categories whose IDs are\nspecified with `enabledRules` or `enabledCategories` are enabled.",
+                                        "type": "boolean",
+                                        "default": false
+                                    },
+                                    "altLanguages": {
+                                        "type": "array",
+                                        "items": {
+                                            "description": "EXPERIMENTAL: Comma-separated list of language codes\nto check if a word is not similar to one of the main language\n(parameter `language`). Unknown words that are similar to a word\nfrom the main language will still be considered errors but with\ntype `Hint`. For languages with variants (English, German, Portuguese)\nyou need to specify the variant, e.g. `en-GB` instead of just\n`en`.",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "language": {
+                                        "description": "A language code like `en-US`, `de-DE`, `fr`, or `auto`\nto guess the language automatically (see `preferredVariants` below).\nFor languages with variants (English, German, Portuguese) spell\nchecking will only be activated when you specify the variant,\ne.g. `en-GB` instead of just `en`.",
+                                        "type": "string",
+                                        "example": [
+                                            "auto",
+                                            "de-DE",
+                                            "en-US",
+                                            "en",
+                                            "fr",
+                                            "en-GB"
+                                        ]
+                                    },
+                                    "disabledRules": {
+                                        "description": "IDs of rules to be disabled, comma-separated",
+                                        "type": "string"
+                                    },
+                                    "text": {
+                                        "description": "The text to be checked. This or 'data' is required.",
+                                        "type": "string"
+                                    },
+                                    "disabledCategories": {
+                                        "description": "IDs of categories to be disabled, comma-separated",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "enabledOnly",
+                                    "language"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Response description currently not supported by RestTestGen.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-dependencies": [
+                    "OnlyOne(data,text);"
+                ]
+            }
+        }
+    }
+}

@@ -24,7 +24,7 @@ python3 -m nltk.downloader stopwords
 python3 -m nltk.downloader wordnet
 ```
 
-To extract rules using a given specification, execute the following command:
+To extract rules using a given specification, execute the following command in the `rule_extractor` directory:
 
 ```
 python nlp2rest.py --extract_rules --spec_path ../specifications/swagger/fdic.yaml --settings ./settings2.yaml --model_name rest_model
