@@ -4,6 +4,7 @@
 __pycache__/
 
 venv/
+target/
 
 nl.json
 rule_extractor/rest_model
@@ -11,4 +12,6 @@ rule_extractor/rest_model.wv.vectors_ngrams.npy
 log-*.txt
 output.json
 found_rules.json
+nlp-result.json
+validation-result.json
 legacy.py

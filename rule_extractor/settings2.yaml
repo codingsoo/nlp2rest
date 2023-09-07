@@ -61,8 +61,8 @@ value:
     - "example"
     - "value"
     - "like"
-    - "e.g."
-    - "i.e."
+    - "e.g"
+    - "i.e"
     - "such"
     - "set"
   minMax:

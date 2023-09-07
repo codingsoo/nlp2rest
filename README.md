@@ -1,71 +1,44 @@
-# Enhancing REST API Testing with NLP Techniques
+# NLP2REST
 
-## Announcement
+NLP2REST is a tool designed to extract REST API rules from natural language descriptions, thereby enhancing the efficiency and capabilities of REST API testing tools. This work has been published at ISSTA 2023, "[Enhancing REST API Testing with NLP Techniques](https://dl.acm.org/doi/10.1145/3597926.3598131)".
 
-We are currently aware of issues affecting the validation module in our project, specifically problems related to incorrect specification generation and excessive running times. Our team is actively working on resolving these issues. We understand that these problems may be impacting your use of the software, and we sincerely apologize for any inconvenience caused.
+[Bibtex Citation Here](https://github.com/codingsoo/nlp2rest/tree/main/docs/issta2023.bib)
 
-## Getting Started
 
-This section provides a comprehensive guide to setting up an artifact and validating its functionality using a simple example. The setup process was successfully tested on a Google Cloud EC2 machine using an Ubuntu 20.04 image.
+## Quick Start
 
-1. Setup environment:
+If you have a Swagger or an OpenAPI Specification, you can quickly use our tool.
 
-First, Please ensure that the paths to Java 8 and Java 11 are correctly defined in the `java8.env` and `java11.env` files respectively. Then, start by setting up your environment. This can be done by executing the setup script in your terminal as shown below:
+First, download the following pretrained models and download requirements:
 
-```
-sh setup.sh
-```
-
-2. Run Service Proxy:
-
-Navigate to the services directory and run the Service Proxy using Python3:
-
-```
-cd services
-python3 run_service.py rest-countries no_token
-```
-
-3. Run Rule Extractor:
-
-Before running the Rule Extractor, download the following pretrained models and place them in the `rule_extractor` directory:
 - [model](https://drive.google.com/file/d/1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF/view?usp=share_link)
 - [model_ngram](https://drive.google.com/file/d/1j1XA1dufDgqSkIGlQn97-WeKElaL8708/view?usp=share_link)
 
-Then, navigate to the `rule_extractor` directory and build a Docker image tagged 'rex'. Please allow around 5 minutes to build the Docker image. Finally, run the Docker image, mapping the host port 4000 to the Docker container's port 4000.
-
 ```
+wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1-jawBqo3c3eMRkXF8Y73oLEFNSOphbpF' -O rest_model
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&confirm=any_non_empty_string_here&id=1j1XA1dufDgqSkIGlQn97-WeKElaL8708' -O rest_model.wv.vectors_ngrams.npy
+
 cd rule_extractor
-docker build -t rex .
-docker run -p 4000:4000 rex
+pip3 install -r requirements.txt
+python3 -m nltk.downloader stopwords
+python3 -m nltk.downloader wordnet
 ```
 
-4. Run Rule Validator:
-
-Firstly, adjust the `specificationFileName` in the `rtg_config.json` file to point to the desired specification. We preconfigured the file to use the specification of rest-countries, and our NLP-based strategy (named `NlpStrategy`). Then, use Gradle to run the Rule Validator as follows:
+To extract rules using a given specification, execute the following command:
 
 ```
-./gradlew run
+python nlp2rest.py --extract_rules --spec_path ../specifications/swagger/fdic.yaml --settings ./settings2.yaml --model_name rest_model
 ```
-> To run the above command, the `gradlew` file must be executable. Make it executable with `sudo chmod +x gradlew`
 
-This will generate an enhanced specification in the `output` directory.
+The extracted rules are saved to a file named `found_rules.json` in the project root directory.
 
 ## Detailed Instructions
 
-This repository contains the components necessary to run NLP2REST, an approach designed to automatically enhance OpenAPI specifications with rules extracted from natural language description fields. These rules include constraints and example values. 
+This section contains the components necessary to run NLP2REST, an approach designed to automatically enhance OpenAPI specifications with rules extracted from natural language description fields. These rules include constraints and example values. 
 
-In addition, this repository provides all the components required to replicate the experiment described in our paper, including testing tools and benchmark APIs.
+In addition, this section provides all the components required to replicate the experiment described in our paper, including testing tools and benchmark APIs.
 
-### Table of Contents
-
-1. [Recommended Environment](#recommended-environment)
-2. [Setup](#setup)
-3. [Steps to Use NLP2REST](#steps-to-use-nlp2rest)
-    - REST API(s)
-    - Deployment of the Rule Extractor Service
-    - Run the Rule Validator
-
-### Recommended Environment
+### Environment
 
 This project has been tested and is known to work well on the following setup:
 
@@ -80,21 +53,26 @@ We provide a setup script to install the necessary packages and set up the envir
 ./setup.sh
 ```
 
-It will take around 10 minutes.
+It will take around 10 minutes. If you are not using Ubuntu 20.04, please check the required packages in `setup.sh` and install them manually.
 
 ### Steps to Use NLP2REST
 
 1. **REST API(s):** NLP2REST is designed to be applied to one or more target REST APIs. The APIs should be accessible at the URLs detailed in their OpenAPI specifications. We have provided several REST APIs in the [services](https://github.com/codingsoo/nlp2rest/tree/main/services) directory along with a manuscript for running these services. Alternatively, you can use any public APIs accessible online that have OpenAPI specifications. For a quick trial of our approach, we suggest using the [FDIC REST API](https://banks.data.fdic.gov/). This is an online API and its specification is available in our `specifications` directory.
 
-2. **Deployment of the Rule Extractor Service:** This is a Python-based service accessible via a REST API. It's designed to extract formal OpenAPI rules from natural language descriptions. To run the Rule Extractor service, please adhere to the instructions provided in the [rule_extractor](https://github.com/codingsoo/nlp2rest/tree/main/rule_extractor) directory. In brief, you will need to:
+2. **Deployment of the Rule Extractor:** This is a Python-based service accessible via a REST API. It's designed to extract formal OpenAPI rules from natural language descriptions. To run the Rule Extractor, please adhere to the instructions provided in the [rule_extractor](https://github.com/codingsoo/nlp2rest/tree/main/rule_extractor) directory. In brief, you will need to:
     - Obtain a model either by training one yourself or by downloading the pre-trained model from the Google Drive link supplied in the README.
     - Build and run the Python application. We provide a `Dockerfile` for rapid deployment of the service. Alternatively, you can follow the instructions to install the service directly on your system.
     - The service is designed to run on `localhost` on port `4000`, i.e., [http://localhost:4000/]().
 
-3. **Run the Rule Validator:** This is a bespoke strategy built upon the RestTestGen framework, which is available in the [rule_validator](https://github.com/codingsoo/nlp2rest/tree/main/rule_validator) directory. The strategy parses the OpenAPI specification of the chosen API, uses the Rule Extractor service to draw out rules from natural language descriptions, and interacts with the target API to validate the extracted rules.
+3. **Run the Rule Validator:** This is a bespoke strategy built upon the RestTestGen framework, which is available in the [rule_validator](https://github.com/codingsoo/nlp2rest/tree/main/rule_validator) directory. The strategy parses the OpenAPI specification of the chosen API, uses the Rule Extractor to draw out rules from natural language descriptions, and interacts with the target API to validate the extracted rules.
 To employ our strategy within RestTestGen, you need to configure RestTestGen to run the strategy named `NlpStrategy`. For guidance, refer to the official RestTestGen README file available in the [rule_validator](https://github.com/codingsoo/nlp2rest/tree/main/rule_validator) directory or in the [official RestTestGen repository](https://github.com/SeUniVr/RestTestGen).
 The results of RestTestGen will be stored in an `output` directory. This directory will hold the enhanced OpenAPI specification and reports of the HTTP interactions generated by the Rule Validator. Please note that RestTestGen expects the Rule Extractor to be running at [http://localhost:4000/](http://localhost:4000/). If the Rule Extractor is running on a different port or host, update the `baseUrl` field in the `RuleExtractorProxy` class of RestTestGen.
+Currently, we found some bugs in the generated specifications. While fixing the bugs, please use `validator.py`. You can use it using this command:
+```
+python3 validator.py {Json OpenAPI Specification location}
+```
+It will generate `validation-result.json` which is a report of after validation.
 
-Congratulations! You have successfully generated an enhanced OpenAPI specification. Using this enhanced specification can significantly boost the performance of REST API testing tools. To utilize these tools, please consult the instructions in the [tools](https://github.com/codingsoo/nlp2rest/tree/main/tools) directory.
+You have successfully generated an enhanced OpenAPI specification and/or extracted rule report. Using these rules significantly boost the performance of REST API testing tools. To utilize these tools, please check the instructions in the [tools](https://github.com/codingsoo/nlp2rest/tree/main/tools) directory.
 
 4. **Validate the Result:** For each service, we have documented the identified keywords and corresponding values we discovered in this [Google sheets](https://docs.google.com/spreadsheets/d/1SRdRQUJmavPkXmKndwY685aqjtfKmjvCbpKiCKe7Tis/edit#gid=1721158037). To validate our findings, you can cross-check if the enhanced specification includes the corresponding keyword and value entries present in the Google sheet.

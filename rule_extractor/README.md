@@ -90,7 +90,7 @@ This command sends a POST request to the /extract_rules endpoint with the provid
 
 ### Command Line Interface (CLI)
 
-To run the CLI, execute the `nlp2rest.py` script (or whatever your file with the CLI code is named) with the required arguments:
+To run the CLI, execute the `nlp2rest.py` script with the required arguments:
 
 ```
 python main.py --option [values]
